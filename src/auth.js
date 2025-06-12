@@ -10,7 +10,7 @@ import { requireAuth } from './requireAuth.js';
 import { logger } from './logger.js';
 
 // Initialize Supabase
-const supabaseUrl = 'https://qpvdjklmliwunjimrtpg.supabase.co'; // Replace with your Supabase URL
+const supabaseUrl = 'https://qpvdjklmliwunjimrtpg.supabase.co';
 const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFwdmRqa2xtbGl3dW5qaW1ydHBnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDIwMzg2MTEsImV4cCI6MjA1NzYxNDYxMX0.FZRpiDZtUVFtjLnNrTqALRWR4ZN1IAj_22VngzaQllw'; // Replace with your Supabase anon key
 const supabase = createClient(supabaseUrl, supabaseKey);
 
@@ -24,6 +24,9 @@ const transporter = nodemailer.createTransport({
 });
 authRouter.post('/login', async (ctx) => {
   const { email, password } = ctx.request.body;
+  console.log('BODY primit la login:', ctx.request.body);
+  console.log('Email:', email, 'Password:', password);
+
   logger.info(`[AUTH][LOGIN_ATTEMPT] Email: ${email}`);
   try {
     // Find the user by email
@@ -31,9 +34,9 @@ authRouter.post('/login', async (ctx) => {
         .from('users')
         .select('*')
         .eq('email', email)
-        .eq('is_deleted', false) // ✅ ignoră conturile șterse
+        .eq('is_deleted', false)
         .single();
-
+    console.log("user by email",user);
     if (error || !user) {
       logger.warn(`[AUTH][LOGIN_FAIL] Email: ${email}`);
       ctx.response.body = { error: 'Invalid credentials' };
@@ -57,6 +60,7 @@ authRouter.post('/login', async (ctx) => {
       ctx.response.body = { message: 'Invalid credentials' };
       ctx.response.status = 400; // Bad Request
     }
+    console.log("user matched by password",user);
 
   } catch (err) {
     logger.error(`[AUTH][LOGIN_ERROR] Email: ${email}, Error: ${err.message}`);

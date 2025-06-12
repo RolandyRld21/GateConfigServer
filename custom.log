@@ -8880,3 +8880,29 @@
 [2025-06-12T17:13:31.117Z] info: [REVIEW][GET_GATE_REVIEWS] Email: r@r, GateId: 52, Sort: time desc
 [2025-06-12T17:13:31.373Z] info: [REVIEW][GET_GATE_REVIEWS_SUCCESS] Email: r@r, GateId: 52, Count: 2
 [2025-06-12T17:13:31.373Z] info: [TIMING][REQUEST_END] Email: Unknown, Path: GET /api/reviews/gate/52, Status: 200, Duration: 259ms
+[2025-06-12T18:41:52.609Z] info: [TIMING][REQUEST_START] Email: Unknown, Path: GET /api/auth/login
+[2025-06-12T18:41:52.614Z] error: [EXCEPTION][HANDLER] Email: Unknown, Path: GET /api/auth/login, Status: 401, Error: Authentication Error
+[2025-06-12T18:41:52.615Z] info: [TIMING][REQUEST_END] Email: Unknown, Path: GET /api/auth/login, Status: 401, Duration: 6ms
+[2025-06-12T18:41:52.681Z] info: [TIMING][REQUEST_START] Email: Unknown, Path: GET /favicon.ico
+[2025-06-12T18:41:52.682Z] error: [EXCEPTION][HANDLER] Email: Unknown, Path: GET /favicon.ico, Status: 401, Error: Authentication Error
+[2025-06-12T18:41:52.683Z] info: [TIMING][REQUEST_END] Email: Unknown, Path: GET /favicon.ico, Status: 401, Duration: 2ms
+[2025-06-12T18:42:34.760Z] info: [TIMING][REQUEST_START] Email: Unknown, Path: POST /api/auth/login
+[2025-06-12T18:42:34.777Z] info: [AUTH][LOGIN_ATTEMPT] Email: r@r
+[2025-06-12T18:42:43.182Z] warn: [AUTH][LOGIN_FAIL] Email: r@r
+[2025-06-12T18:42:43.182Z] warn: [TIMING][SLOW_REQUEST] Email: Unknown, Path: POST /api/auth/login, Status: 400, Duration: 8422ms
+[2025-06-12T18:42:44.529Z] info: [TIMING][REQUEST_START] Email: Unknown, Path: POST /api/auth/login
+[2025-06-12T18:42:44.530Z] info: [AUTH][LOGIN_ATTEMPT] Email: r@r
+[2025-06-12T18:42:53.075Z] info: [TIMING][REQUEST_START] Email: Unknown, Path: POST /api/auth/login
+[2025-06-12T18:42:53.076Z] info: [AUTH][LOGIN_ATTEMPT] Email: r@r
+[2025-06-12T18:42:56.142Z] warn: [AUTH][LOGIN_FAIL] Email: r@r
+[2025-06-12T18:42:56.143Z] warn: [TIMING][SLOW_REQUEST] Email: Unknown, Path: POST /api/auth/login, Status: 400, Duration: 3068ms
+[2025-06-12T18:42:59.848Z] warn: [AUTH][LOGIN_FAIL] Email: r@r
+[2025-06-12T18:42:59.848Z] warn: [TIMING][SLOW_REQUEST] Email: Unknown, Path: POST /api/auth/login, Status: 400, Duration: 15319ms
+[2025-06-12T18:43:14.918Z] info: [TIMING][REQUEST_START] Email: Unknown, Path: POST /api/auth/login
+[2025-06-12T18:43:14.918Z] info: [AUTH][LOGIN_ATTEMPT] Email: r@r
+[2025-06-12T18:43:18.582Z] warn: [AUTH][LOGIN_FAIL] Email: r@r
+[2025-06-12T18:43:18.582Z] warn: [TIMING][SLOW_REQUEST] Email: Unknown, Path: POST /api/auth/login, Status: 400, Duration: 3664ms
+[2025-06-12T18:45:28.088Z] info: [TIMING][REQUEST_START] Email: Unknown, Path: POST /api/auth/login
+[2025-06-12T18:45:28.103Z] info: [AUTH][LOGIN_ATTEMPT] Email: r@r
+[2025-06-12T18:45:37.695Z] warn: [AUTH][LOGIN_FAIL] Email: r@r
+[2025-06-12T18:45:37.696Z] warn: [TIMING][SLOW_REQUEST] Email: Unknown, Path: POST /api/auth/login, Status: 400, Duration: 9608ms
