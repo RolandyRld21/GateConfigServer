@@ -8852,3 +8852,19 @@
 [2025-06-12T16:25:26.580Z] info: [REVIEW][GET_GATE_REVIEWS] Email: r@r, GateId: 29, Sort: time desc
 [2025-06-12T16:25:26.656Z] info: [REVIEW][GET_GATE_REVIEWS_SUCCESS] Email: r@r, GateId: 29, Count: 0
 [2025-06-12T16:25:26.657Z] info: [TIMING][REQUEST_END] Email: Unknown, Path: GET /api/reviews/gate/29, Status: 200, Duration: 78ms
+[2025-06-12T19:09:16.862Z] info: [TIMING][REQUEST_START] Email: Unknown, Path: POST /api/auth/login
+[2025-06-12T19:09:16.879Z] info: [AUTH][LOGIN_ATTEMPT] Email: r@r
+[2025-06-12T19:09:20.583Z] warn: [AUTH][LOGIN_FAIL] Email: r@r
+[2025-06-12T19:09:20.584Z] warn: [TIMING][SLOW_REQUEST] Email: Unknown, Path: POST /api/auth/login, Status: 400, Duration: 3723ms
+[2025-06-12T22:16:42.082Z] info: [TIMING][REQUEST_START] Email: Unknown, Path: POST /api/auth/login
+[2025-06-12T22:16:42.101Z] info: [AUTH][LOGIN_ATTEMPT] Email: r@r
+[2025-06-12T22:16:43.336Z] info: [AUTH][LOGIN_SUCCESS] Email: r@r
+[2025-06-12T22:16:43.342Z] warn: [TIMING][SLOW_REQUEST] Email: Unknown, Path: POST /api/auth/login, Status: 200, Duration: 1260ms
+[2025-06-12T22:16:43.365Z] info: [TIMING][REQUEST_START] Email: Unknown, Path: GET /api/article/all
+[2025-06-12T22:16:43.368Z] info: [ARTICLE][GET_ALL_ARTICLES] Admin request
+[2025-06-12T22:16:43.369Z] info: [TIMING][REQUEST_START] Email: Unknown, Path: GET /api/orders
+[2025-06-12T22:16:43.370Z] info: [ORDER][GET_USER_ORDERS] Email: r@r, FinalCartId: N/A
+[2025-06-12T22:16:43.730Z] info: [ORDER][GET_USER_ORDERS_SUCCESS] Email: r@r, Count: 8
+[2025-06-12T22:16:43.730Z] info: [TIMING][REQUEST_END] Email: Unknown, Path: GET /api/orders, Status: 200, Duration: 361ms
+[2025-06-12T22:16:46.550Z] info: [ARTICLE][GET_ALL_ARTICLES_SUCCESS] Count: 28
+[2025-06-12T22:16:46.551Z] warn: [TIMING][SLOW_REQUEST] Email: Unknown, Path: GET /api/article/all, Status: 200, Duration: 3186ms

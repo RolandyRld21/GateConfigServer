@@ -37,8 +37,9 @@ const publicApiRouter = new Router({ prefix });
 publicApiRouter
     .use('/auth', authRouter.routes())
     .use('/payment', paymentRouter.routes())
-    .use('/route', routeRouter.routes());
-
+    .use('/route', routeRouter.routes())
+    .use("/api/upload", uploadRouter.routes())
+    .use("/api/upload", uploadRouter.allowedMethods());
 app
     .use(publicApiRouter.routes())
     .use(publicApiRouter.allowedMethods());
