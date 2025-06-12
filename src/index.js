@@ -12,10 +12,10 @@ import { authRouter } from './auth.js';
 import { paymentRouter } from './payment.js';
 import { finalCartRouter } from './finalCart.js';
 import { orderRouter } from './order.js';
-import {reviewRouter} from "./review.js"; // Import the order router
+import {reviewRouter} from "./review.js";
 import { addressRouter } from './address.js';
 import routeRouter from './route.js';
-import messageRouter from "./messages.js"; // ✅ This matches the default export
+import messageRouter from "./messages.js";
 const app = new Koa();
 const server = http.createServer(app.callback());
 const wss = new WebSocket.Server({ server });
@@ -43,7 +43,7 @@ app
     .use(publicApiRouter.routes())
     .use(publicApiRouter.allowedMethods());
 
-// Protected routes
+
 app.use(jwt(jwtConfig));
 
 const protectedApiRouter = new Router({ prefix });
@@ -58,6 +58,9 @@ app
     .use(protectedApiRouter.routes())
     .use(protectedApiRouter.allowedMethods());
 
-server.listen(3000, '0.0.0.0');
-console.log('started on port 3000');
+const PORT = process.env.PORT || 3000;
+server.listen(PORT, '0.0.0.0', () => {
+    console.log(`Server started on port ${PORT}`);
+});
+
 export default app;

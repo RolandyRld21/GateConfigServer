@@ -8852,3 +8852,31 @@
 [2025-06-12T16:25:26.580Z] info: [REVIEW][GET_GATE_REVIEWS] Email: r@r, GateId: 29, Sort: time desc
 [2025-06-12T16:25:26.656Z] info: [REVIEW][GET_GATE_REVIEWS_SUCCESS] Email: r@r, GateId: 29, Count: 0
 [2025-06-12T16:25:26.657Z] info: [TIMING][REQUEST_END] Email: Unknown, Path: GET /api/reviews/gate/29, Status: 200, Duration: 78ms
+[2025-06-12T17:13:16.735Z] info: [TIMING][REQUEST_START] Email: Unknown, Path: GET /api/article/all
+[2025-06-12T17:13:16.740Z] info: [ARTICLE][GET_ALL_ARTICLES] Admin request
+[2025-06-12T17:13:16.777Z] info: [TIMING][REQUEST_START] Email: Unknown, Path: GET /api/orders
+[2025-06-12T17:13:16.779Z] info: [ORDER][GET_USER_ORDERS] Email: r@r, FinalCartId: N/A
+[2025-06-12T17:13:17.752Z] info: [ORDER][GET_USER_ORDERS_SUCCESS] Email: r@r, Count: 8
+[2025-06-12T17:13:17.753Z] info: [TIMING][REQUEST_END] Email: Unknown, Path: GET /api/orders, Status: 200, Duration: 976ms
+[2025-06-12T17:13:19.381Z] info: [TIMING][REQUEST_START] Email: Unknown, Path: GET /api/article/all
+[2025-06-12T17:13:19.382Z] info: [ARTICLE][GET_ALL_ARTICLES] Admin request
+[2025-06-12T17:13:19.385Z] info: [TIMING][REQUEST_START] Email: Unknown, Path: GET /api/orders
+[2025-06-12T17:13:19.386Z] info: [ORDER][GET_USER_ORDERS] Email: r@r, FinalCartId: N/A
+[2025-06-12T17:13:19.861Z] info: [ORDER][GET_USER_ORDERS_SUCCESS] Email: r@r, Count: 8
+[2025-06-12T17:13:19.861Z] info: [TIMING][REQUEST_END] Email: Unknown, Path: GET /api/orders, Status: 200, Duration: 476ms
+[2025-06-12T17:13:20.295Z] info: [TIMING][REQUEST_START] Email: Unknown, Path: GET /api/article/all
+[2025-06-12T17:13:20.296Z] info: [ARTICLE][GET_ALL_ARTICLES] Admin request
+[2025-06-12T17:13:20.297Z] info: [TIMING][REQUEST_START] Email: Unknown, Path: GET /api/orders
+[2025-06-12T17:13:20.298Z] info: [ORDER][GET_USER_ORDERS] Email: r@r, FinalCartId: N/A
+[2025-06-12T17:13:23.894Z] info: [ORDER][GET_USER_ORDERS_SUCCESS] Email: r@r, Count: 8
+[2025-06-12T17:13:23.894Z] warn: [TIMING][SLOW_REQUEST] Email: Unknown, Path: GET /api/orders, Status: 200, Duration: 3597ms
+[2025-06-12T17:13:27.532Z] error: [ARTICLE][GET_ALL_ARTICLES_ERROR] Error: canceling statement due to statement timeout
+[2025-06-12T17:13:27.533Z] warn: [TIMING][SLOW_REQUEST] Email: Unknown, Path: GET /api/article/all, Status: 500, Duration: 8152ms
+[2025-06-12T17:13:27.694Z] info: [ARTICLE][GET_ALL_ARTICLES_SUCCESS] Count: 28
+[2025-06-12T17:13:27.694Z] warn: [TIMING][SLOW_REQUEST] Email: Unknown, Path: GET /api/article/all, Status: 200, Duration: 10959ms
+[2025-06-12T17:13:28.988Z] info: [ARTICLE][GET_ALL_ARTICLES_SUCCESS] Count: 28
+[2025-06-12T17:13:28.988Z] warn: [TIMING][SLOW_REQUEST] Email: Unknown, Path: GET /api/article/all, Status: 200, Duration: 8693ms
+[2025-06-12T17:13:31.114Z] info: [TIMING][REQUEST_START] Email: Unknown, Path: GET /api/reviews/gate/52
+[2025-06-12T17:13:31.117Z] info: [REVIEW][GET_GATE_REVIEWS] Email: r@r, GateId: 52, Sort: time desc
+[2025-06-12T17:13:31.373Z] info: [REVIEW][GET_GATE_REVIEWS_SUCCESS] Email: r@r, GateId: 52, Count: 2
+[2025-06-12T17:13:31.373Z] info: [TIMING][REQUEST_END] Email: Unknown, Path: GET /api/reviews/gate/52, Status: 200, Duration: 259ms
