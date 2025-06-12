@@ -32,7 +32,7 @@ app.use(bodyParser({
 
 const prefix = '/api';
 
-// Public routes
+
 const publicApiRouter = new Router({ prefix });
 publicApiRouter
     .use('/auth', authRouter.routes())
