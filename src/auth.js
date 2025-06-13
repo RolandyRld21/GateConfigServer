@@ -29,7 +29,6 @@ authRouter.post('/login', async (ctx) => {
 
   logger.info(`[AUTH][LOGIN_ATTEMPT] Email: ${email}`);
   try {
-    // Find the user by email
     const { data: user, error } = await supabase
         .from('users')
         .select('*')
@@ -103,7 +102,7 @@ authRouter.post('/signup', async (ctx) => {
       return;
     }
 
-    // Insert the user (username is not required to be unique)
+    // Insert the user
     const { data, error } = await supabase
         .from('users')
         .insert([{ username, password: hashedPassword, email, role: 'client' }]);

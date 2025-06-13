@@ -20,7 +20,7 @@ export const requireAuth = async (ctx, next) => {
 
     try {
         const user = jwt.verify(token, jwtConfig.secret);
-        ctx.state.user = user; // 👈 aici atașezi email-ul la context
+        ctx.state.user = user;
 
         logger.info(`[AUTH][REQUIRE_AUTH_SUCCESS] Email: ${user.email}, Path: ${requestMethod} ${requestPath}`);
         await next();

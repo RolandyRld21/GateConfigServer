@@ -14,7 +14,7 @@ paymentRouter.post('/create-payment-intent', async (ctx) => {
 
     try {
         const paymentIntent = await stripe.paymentIntents.create({
-            amount, // ex: 5000 = 50.00 lei
+            amount,
             currency: 'ron',
         });
 
